@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <com.wsl.library.progress.SimpleProgressBar
+        android:id="@+id/progress1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp" />
+
+    <com.wsl.library.progress.ProgressWheel2
+        android:id="@+id/progress2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/progress1"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"
+        app:barColor="#19b458"
+        app:contourColor="#efefef"
+        app:progressBarLength="60dp"
+        app:progressBarWidth="4dp"
+        app:rimColor="#efefef"
+        app:rimWidth="4dp"
+        app:secondText="@string/progress_label"
+        app:secondTextColor="#aaa"
+        app:secondTextSize="9dp"
+        app:text="0"
+        app:textColor="#19b458"
+        app:textSize="14sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:onClick="changeProgress"
+        android:text="@string/progress_change" />
+
+</RelativeLayout>
